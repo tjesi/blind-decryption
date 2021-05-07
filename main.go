@@ -28,8 +28,7 @@ func main() {
 
 	// Encode input message
 	var InputMessage [B]byte
-	copy(InputMessage[:], "{Tjerand Silde}")
-	fmt.Println("Input: ", string(InputMessage[:]))
+	copy(InputMessage[:], "{Firstname,Lastname,DateOfBirth}")
 
 	// Encrypt the input message
 	X, Y, Z := Encrypt(Kx, Ky, InputMessage)
