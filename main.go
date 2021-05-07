@@ -32,7 +32,7 @@ func main() {
 	fmt.Println("Input: ", string(InputMessage[:]))
 
 	// Encrypt the input message
-  X, Y, Z := Encrypt(Kx, Ky, InputMessage)
+	X, Y, Z := Encrypt(Kx, Ky, InputMessage)
 
 	// Blind ciphertext
 	Rx, Ry, r := Blind(X, Y)
