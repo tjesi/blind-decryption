@@ -30,5 +30,5 @@ Step 4:
 - H sends D back to V without knowing C or ID
 
 Step 5:
-- V receives D from H and applies Unblind to D to get ID
+- V receives D from H and applies **Unblind** to D to get ID
 - V verifies that ID is identical to U's physical ID
