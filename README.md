@@ -1,6 +1,6 @@
 # Blind decryption using hashed ElGamal
 
-WARNING: THIS IS A PROOF OF CONCEPT AND SHOULD NOT BE USED IN PRACICE
+WARNING: THIS IS A PROOF OF CONCEPT AND SHOULD NOT BE USED IN PRACTICE
 
 Use-case: Corona-certificates that prevents tracing of users and sharing of medical data.
 
