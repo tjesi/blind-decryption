@@ -9,7 +9,7 @@ Players:
 - User U that get and show their certificate
 - Verifier V that verify a user's certificate
 
-We use a blind decryption protocol with hashed ElGamal based on the work by [Sakurai and Yamane from 1996](https://link.springer.com/chapter/10.1007/3-540-61996-8_45).
+We use a blind decryption protocol with hashed ElGamal based on a paper by [Sakurai and Yamane](https://link.springer.com/chapter/10.1007/3-540-61996-8_45).
 
 Step 1:
 - H encrypts U's ID using **Encrypt** to produce a ciphertext C
