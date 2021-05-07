@@ -33,10 +33,12 @@ func Encrypt(Kx, Ky *big.Int, M [B]byte) (X, Y *big.Int, Z [B]byte) {
 	return
 }
 
-// XORBytes compute A XOR B
-func XORBytes(a, b [B]byte, n int) (dst [B]byte) {
-	for i := 0; i < n; i++ {
-		dst[i] = a[i] ^ b[i]
+// XORBytes computes Output = Input1 XOR Input2.
+// This is the function safeXORBytes copied from
+// https://golang.org/src/crypto/cipher/xor_generic.go.
+func XORBytes(Input1, Input2 [B]byte, B int) (Output [B]byte) {
+	for i := 0; i < B; i++ {
+		Output[i] = Input1[i] ^ Input2[i]
 	}
 	return
 }
