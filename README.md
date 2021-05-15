@@ -13,6 +13,7 @@ We use a blind decryption protocol with hashed ElGamal based on a paper by [Saku
 
 Step 1:
 - H encrypts U's ID using **Encrypt** to produce a ciphertext C
+- The public key used is wrt the exipiration date of the certificate
 - H signs the ciphertext C creating a signature S (not included)
 - H creates a certificate for user ID containing C and S
 
@@ -26,9 +27,10 @@ Step 3:
 - V sends R to H to get a blind decryption
 
 Step 4:
-- H receive R and applies **BlindDecrypt** to get D
-- H sends D back to V without knowing C or ID
+- H receive R and applies **BlindDecrypt** with multiple keys to get D
+- The secret keys used is wrt possible expiration date of a certificate
+- H sends the set of D values back to V without knowing C or ID
 
 Step 5:
-- V receives D from H and applies **Unblind** to D to get ID
-- V verifies that ID is identical to U's physical ID
+- V receives the set of D values from H and applies **Unblind** to each D to get ID
+- V verifies that one of the decrypted ID's is identical to U's physical ID
